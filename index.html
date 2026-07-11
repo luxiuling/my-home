@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>政務網</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <header class="topbar">
+          <a class="brand" href="#overview" aria-label="政務網首頁">
+            <span class="brand-mark">政</span>
+            <span>
+              <strong>政務網</strong>
+              <small>多線程營運工作臺</small>
+            </span>
+          </a>
+          <nav class="nav-links" aria-label="主導航">
+            <a class="active" href="#overview">首頁</a>
+            <a href="#publishing">發布中心</a>
+            <a href="#matrix">帳號矩陣</a>
+            <a href="#analytics">數據中心</a>
+            <a href="#threads">任務會話</a>
+          </nav>
+          <div class="top-actions">
+            <button class="icon-button" type="button" aria-label="搜尋">⌕</button>
+            <button class="icon-button" type="button" aria-label="通知">!</button>
+            <button class="primary-action" type="button">新建發布</button>
+          </div>
+        </header>
+
+        <section class="hero-panel" id="overview" aria-label="系統概覽">
+          <div class="hero-copy">
+            <p class="eyebrow">Content Automation Console</p>
+            <h1>政務網內容矩陣自動發布管理臺</h1>
+            <p class="hero-text">把選題規劃、內容生產、帳號分發、定時發布、失敗重試和數據復盤放進同一個工作臺，由主線程統一調度，多線程並行推進。</p>
+            <div class="hero-metrics" aria-label="核心指標">
+              <article>
+                <strong>36</strong>
+                <span>待發布筆記</span>
+              </article>
+              <article>
+                <strong>12</strong>
+                <span>矩陣帳號</span>
+              </article>
+              <article>
+                <strong>98%</strong>
+                <span>近 7 日成功率</span>
+              </article>
+            </div>
+          </div>
+          <img class="reference-image" src="assets/reference-dashboard.png" alt="綠色數字化工作臺參考圖" />
+        </section>
+
+        <section class="dashboard-grid" aria-label="工作臺">
+          <aside class="side-panel">
+            <div class="panel-heading">
+              <h2>我的事項</h2>
+              <span>今日</span>
+            </div>
+            <button class="side-item active" type="button" data-filter="all">
+              <span>全部任務</span>
+              <strong>32</strong>
+            </button>
+            <button class="side-item" type="button" data-filter="draft">
+              <span>內容待審</span>
+              <strong>8</strong>
+            </button>
+            <button class="side-item" type="button" data-filter="schedule">
+              <span>排期發布</span>
+              <strong>16</strong>
+            </button>
+            <button class="side-item" type="button" data-filter="retry">
+              <span>失敗重試</span>
+              <strong>3</strong>
+            </button>
+            <button class="side-item" type="button" data-filter="report">
+              <span>復盤分析</span>
+              <strong>5</strong>
+            </button>
+          </aside>
+
+          <section class="main-panel" id="threads">
+            <div class="panel-heading">
+              <div>
+                <h2>多線程任務看板</h2>
+                <p>當前對話作為主線程，自動分配分析、執行、檢查和營運內容任務。</p>
+              </div>
+              <button class="ghost-action" type="button">同步狀態</button>
+            </div>
+
+            <div class="thread-board">
+              <article class="thread-card is-running">
+                <span class="thread-label">主線程</span>
+                <h3>調度彙總</h3>
+                <p>接收需求、拆分任務、合併結果、輸出最終交付。</p>
+                <strong>進行中</strong>
+              </article>
+              <article class="thread-card is-done">
+                <span class="thread-label">線程 A</span>
+                <h3>需求分析</h3>
+                <p>梳理發布流程、帳號邊界、風險和優先級。</p>
+                <strong>已完成</strong>
+              </article>
+              <article class="thread-card is-running">
+                <span class="thread-label">線程 B</span>
+                <h3>實現執行</h3>
+                <p>建立頁面、寫入配置、串聯發布工作區。</p>
+                <strong>進行中</strong>
+              </article>
+              <article class="thread-card">
+                <span class="thread-label">線程 C</span>
+                <h3>檢查驗證</h3>
+                <p>檢查頁面顯示、按鈕狀態、移動端佈局。</p>
+                <strong>等待中</strong>
+              </article>
+              <article class="thread-card is-done">
+                <span class="thread-label">線程 D</span>
+                <h3>內容營運</h3>
+                <p>沉澱標題、正文、標籤和發布節奏策略。</p>
+                <strong>已完成</strong>
+              </article>
+            </div>
+
+            <div class="task-table" id="publishing">
+              <div class="table-row table-head">
+                <span>發布任務</span>
+                <span>帳號</span>
+                <span>時間</span>
+                <span>狀態</span>
+              </div>
+              <div class="table-row" data-status="schedule">
+                <span>護膚測評選題 01</span>
+                <span>種草號 A</span>
+                <span>09:30</span>
+                <span class="status-pill blue">待發布</span>
+              </div>
+              <div class="table-row" data-status="draft">
+                <span>家居收納腳本複核</span>
+                <span>生活號 B</span>
+                <span>11:20</span>
+                <span class="status-pill amber">待審核</span>
+              </div>
+              <div class="table-row" data-status="schedule">
+                <span>通勤穿搭圖文發布</span>
+                <span>穿搭號 C</span>
+                <span>15:40</span>
+                <span class="status-pill blue">待發布</span>
+              </div>
+              <div class="table-row" data-status="retry">
+                <span>親子週末攻略重試</span>
+                <span>親子號 D</span>
+                <span>18:15</span>
+                <span class="status-pill red">需重試</span>
+              </div>
+            </div>
+          </section>
+
+          <aside class="right-panel">
+            <div class="calendar-card">
+              <div class="panel-heading compact">
+                <h2>發布排期</h2>
+                <span>7 月 10 日</span>
+              </div>
+              <div class="timeline">
+                <article>
+                  <time>09:30</time>
+                  <strong>測評筆記自動發布</strong>
+                  <span>種草號 A · 圖文</span>
+                </article>
+                <article>
+                  <time>15:40</time>
+                  <strong>穿搭合集排隊中</strong>
+                  <span>穿搭號 C · 九宮格</span>
+                </article>
+                <article>
+                  <time>21:00</time>
+                  <strong>晚間高峰復盤</strong>
+                  <span>數據中心 · 自動彙總</span>
+                </article>
+              </div>
+            </div>
+
+            <div class="stat-card hot">
+              <span>今日自動化</span>
+              <strong>24 / 27</strong>
+              <p>成功發布任務</p>
+            </div>
+            <div class="stat-card cool">
+              <span>內容庫存</span>
+              <strong>128</strong>
+              <p>可用標題與正文素材</p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="module-strip" id="matrix" aria-label="核心模組">
+          <div class="section-title">
+            <h2>核心能力</h2>
+            <p>圍繞政務網矩陣號的發布、重試、監控和復盤搭建。</p>
+          </div>
+          <div class="module-grid">
+            <article>
+              <span class="module-icon planning"></span>
+              <h3>選題規劃</h3>
+              <p>按品類、帳號人設和發布時間生成內容佇列。</p>
+            </article>
+            <article>
+              <span class="module-icon material"></span>
+              <h3>素材管理</h3>
+              <p>集中管理圖片、影片、標題、正文和標籤。</p>
+            </article>
+            <article>
+              <span class="module-icon account"></span>
+              <h3>帳號矩陣</h3>
+              <p>區分帳號定位、發布頻次、內容風格和風險等級。</p>
+            </article>
+            <article>
+              <span class="module-icon clock"></span>
+              <h3>定時發布</h3>
+              <p>按黃金時間段排隊執行，保留人工確認點。</p>
+            </article>
+            <article>
+              <span class="module-icon retry"></span>
+              <h3>失敗重試</h3>
+              <p>記錄失敗原因，支援重新排隊與人工介入。</p>
+            </article>
+            <article>
+              <span class="module-icon report"></span>
+              <h3>數據復盤</h3>
+              <p>追蹤閱讀、互動、收藏和轉化趨勢。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="plan-section" id="analytics">
+          <div class="section-title">
+            <h2>建設規劃</h2>
+            <p>先把可控流程跑穩，再擴展矩陣號和自動化規模。</p>
+          </div>
+          <div class="plan-columns">
+            <article>
+              <span>階段 01</span>
+              <h3>基礎發布閉環</h3>
+              <p>內容匯入、素材匹配、發布排期、狀態回寫、日誌追蹤。</p>
+            </article>
+            <article>
+              <span>階段 02</span>
+              <h3>矩陣帳號管理</h3>
+              <p>帳號分組、人設標籤、發布頻率、異常提醒、權限隔離。</p>
+            </article>
+            <article>
+              <span>階段 03</span>
+              <h3>營運策略引擎</h3>
+              <p>選題庫、爆款模板、發布時間建議、數據復盤和策略更新。</p>
+            </article>
+            <article>
+              <span>階段 04</span>
+              <h3>穩定性增強</h3>
+              <p>失敗重試、風控提示、人工確認、備份恢復和告警中心。</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
